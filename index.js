@@ -86,7 +86,7 @@ const chunks16 = [
 const seq = num => Array.from(Array(num), (nada, i) => i)
 const randInt = max => Math.floor(Math.random() * Math.floor(max))
 
-console.log('71324704dcfd8f7055ab769c7e088ba3132f117f03015559ff38757b6470a49d'.match(/.{1,16}/g))
+// console.log('71324704dcfd8f7055ab769c7e088ba3132f117f03015559ff38757b6470a49d'.match(/.{1,16}/g))
 
 // const selectRandomWords = (src, num, range) => {
 //   return seq(num)
@@ -291,6 +291,7 @@ const key = '71324704dcfd8f7055ab769c7e088ba3132f117f03015559ff38757b6470a49d'
 const randKey = seq(64)
   .map(() => hexChars[randInt(16)])
   .join('')
+console.log(randKey)
 
 const makeBadPoem = key => {
   const lines = key.match(/.{1,8}/g)
